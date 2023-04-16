@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductModel } from './products/models/product.model';
+import { CartService } from './cart/services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shop';
+  items: ProductModel[] = [];
+
+  constructor(private cartService: CartService){
+    this.items = this.cartService.getItems();
+  }
 }
