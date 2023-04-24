@@ -5,6 +5,7 @@ import { ProductModel } from 'src/app/products/models/product.model';
   providedIn: 'root'
 })
 export class CartService {
+  // думаю, что тип должен содержать дополнительные поля
   private items: ProductModel[] = []
 
   constructor() { }

@@ -10,6 +10,7 @@ import { CartService } from 'src/app/cart/services/cart.service';
 export class ProductComponent {
   @Input() product!: ProductModel;
 
+  // тут не нужно внедрять зависимость, тут надо организовать аутпут
   constructor(private cartService: CartService){}
 
   onAddToCart(): void {
